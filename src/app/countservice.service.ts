@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CountserviceService {
+  num1: number =  125.00;
+  text1 = 'Fall Limited Edition Sneakers';
   count: number = 0;
 
   constructor() { }

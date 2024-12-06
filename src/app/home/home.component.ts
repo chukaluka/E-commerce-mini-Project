@@ -9,8 +9,14 @@ import { CountserviceService } from '../countservice.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  num1 =  '$125.00';
-  text1 = 'Fall Limited Edition Sneakers';
+
+  get numService() {
+    return this.countService.num1;
+  }
+
+  get textService() {
+    return this.countService.text1;
+  }
 
   get currentCount() {
     return this.countService.count;

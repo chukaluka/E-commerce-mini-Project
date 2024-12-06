@@ -1,4 +1,4 @@
- import { Component } from '@angular/core';
+ import { Component, HostListener } from '@angular/core';
  import { CommonModule } from '@angular/common';
  import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -13,6 +13,23 @@ import { CountserviceService } from '../countservice.service';
 })
 export class HeaderComponent {
   hidden = false;
+  isDropdownOpen = false;
+
+  multiplyValue(){
+    return this.numService * this.currentCount;
+  }
+
+  toggleDropdown() {
+     this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  get numService() {
+    return this.countService.num1;
+  }
+
+  get textService() {
+    return this.countService.text1;
+  }
 
   get currentCount() {
     return this.countService.count;
@@ -27,4 +44,17 @@ export class HeaderComponent {
   toggleBadgeVisibility() {
     this.hidden = !this.hidden;
   }
+
+  clearCart() {
+
+  }
+
+  // @HostListener('document:click',['$event'])
+  // onClick(event: MouseEvent) {
+  //   const target = event.target as HTMLElement;
+  //   const clickedInside = target.closest('.relative');
+  //   if(!clickedInside){
+  //     this.isDropdownOpen = false;
+  //   }
+  // }
 }
