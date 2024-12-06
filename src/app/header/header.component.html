@@ -1,0 +1,49 @@
+<div>
+  <nav>
+      <div class="flex items-center justify-between pt-8 pb-10">
+        <div>
+          <ul class="flex flex-row space-x-4 ">
+            <img class="pl-5" src="images/logo.svg" alt="logo">
+            <li class=''>
+              <a href="#" class="pl-11 text-[0.8rem] text-black/60 relative group">
+                <span class="group-hover:text-black">Collections</span>
+                <span class="absolute -bottom-12 left-0 w-full h-0.5 bg-[#ff7d1a] scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </a>
+            </li>
+            <li class=''>
+              <a href="#" class="pl-3 text-[0.8rem] text-black/60 relative group">
+                <span class="group-hover:text-black">Men</span>
+                <span class="absolute -bottom-12 left-0 w-full h-0.5 bg-[#ff7d1a] scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </a>
+            </li>
+            <li class=''>
+              <a href="#" class="pl-3 text-[0.8rem] text-black/60 relative group">
+                <span class="group-hover:text-black">Women</span>
+                <span class="absolute -bottom-12 left-0 w-full h-0.5 bg-[#ff7d1a] scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </a>
+            </li>
+            <li class=''>
+              <a href="#" class="pl-3 text-[0.8rem] text-black/60 relative group">
+                <span class="group-hover:text-black">About</span>
+                <span class="absolute -bottom-12 left-0 w-full h-0.5 bg-[#ff7d1a] scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </a>
+            </li>
+            <li class=''>
+              <a href="#" class="pl-3 text-[0.8rem] text-black/60 relative group">
+                <span class="group-hover:text-black">Contact</span>
+                <span class="absolute -bottom-12 left-0 w-full h-0.5 bg-[#ff7d1a] scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex space-x-9 pr-2">
+          <div [matBadge]="currentCount">
+            <img class="w-4 h-4 mt-2 cursor-pointer" src="images/icon-cart.svg" alt="cart">
+          </div>
+
+          <img class="w-8 rounded-full border-2 border-transparent hover:border-orange-500 transition-all duration-200 cursor-pointer" src="images/image-avatar.png" alt="avatar">
+        </div>
+      </div>
+      <hr>
+  </nav>
+</div>
